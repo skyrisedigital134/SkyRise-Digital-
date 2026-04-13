@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | SkyRise Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #050505;
+            --dark-grey: #121212;
+            --gold: #DAA520;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+
+        /* Navbar (Same as index) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+        }
+
+        .logo { height: 50px; }
+
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+        /* Portfolio Header */
+        .portfolio-header {
+            text-align: center;
+            padding: 80px 5%;
+        }
+
+        .portfolio-header h1 {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 8%;
+        }
+
+        .project-card {
+            background: var(--dark-grey);
+            border: 1px solid #222;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(218, 165, 32, 0.2);
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .project-info p {
+            color: #bbb;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: black;
+            background: var(--gold);
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            background: white;
+        }
+
+        /* Tag Label */
+        .tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(218, 165, 32, 0.2);
+            color: var(--gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="logo.png" alt="SkyRise" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="portfolio-header" data-aos="fade-down">
+        <h1>Our Portfolio</h1>
+        <p>Showcasing our premium digital creations</p>
+    </header>
+
+    <section class="project-grid">
+        <div class="project-card" data-aos="fade-up">
+            <span class="tag">Utility Tool</span>
+            <div class="project-info">
+                <h3>QR Code Generator</h3>
+                <p>A professional, black and gold themed QR generator with custom logo integration and easy download functionality.</p>
+                <a href="https://skyrisedigital134.github.io/QR-Generator-/" target="_blank" class="project-link">View Project <i class="fa fa-external-link"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="tag">Business Web</span>
+            <div class="project-info">
+                <h3>Sonu Band</h3>
+                <p>A complete website solution for event entertainment services, featuring a clean layout and mobile-responsive design.</p>
+                <a href="https://sonuband.netlify.app/" target="_blank" class="project-link">View Project <i class="fa fa-external-link"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="tag">Branding</span>
+            <div class="project-info">
+                <h3>Shere Punjab Dhol</h3>
+                <p>Full brand identity and web presence developed for a premium dhol group, focusing on elite standards and global appeal.</p>
+                <a href="https://sherepunjabdhol.netlify.app/" target="_blank" class="project-link">View Project <i class="fa fa-external-link"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
